@@ -33,7 +33,7 @@ include "storevideo/config.php";
         </a>
 
         <div class="nav-right">
-          <a href="upload.php">
+          <a href="storevideo/index.php">
             <button class="upload-btn"><span>&#43;</span>Загрузить</button>
           </a>
           <a href="login/index.php">
