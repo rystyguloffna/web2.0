@@ -11,10 +11,10 @@
 <body>
     <header>
         <nav class="navbar">
-            <a href="index.html">
+            <a href="index.php">
                 <img class="logo" src="assets/logo.png" alt="Tiktok" />
             </a>
-          <a href="search.html">
+          <a href="search.php">
             <div class="search-bar">
               <input
                 type="text"
@@ -27,10 +27,10 @@
           </a>
   
           <div class="nav-right">
-            <a href="upload.html">
+            <a href="upload.php">
                 <button class="upload-btn"><span>&#43;</span>Загрузить</button>
               </a>
-              <a href="login.html">
+              <a href="login.php">
                 <button class="login-btn">Войти</button>
               </a>
             <div class="drop-down">

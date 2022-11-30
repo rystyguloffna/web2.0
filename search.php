@@ -14,10 +14,10 @@
 <body>
     <header>
         <nav class="navbar">
-          <a href="index.html">
+          <a href="index.php">
             <img class="logo" src="assets/logo.png" alt="Tiktok" />
           </a>
-          <a href="search.html">
+          <a href="search.php">
             <div class="search-bar">
               <input
                 type="text"
@@ -29,10 +29,10 @@
             </div>
           </a>
           <div class="nav-right">
-            <a href="upload.html">
+            <a href="upload.php">
               <button class="upload-btn"><span>&#43;</span>Загрузить</button>
             </a>
-            <a href="login.html">
+            <a href="login.php">
               <button class="login-btn">Войти</button>
             </a>
             <div class="drop-down">
@@ -60,10 +60,10 @@
         <div class="left">
           <div class="fix">
             <div class="btns">
-                <a href="index.html"><i class="fas fa-home"></i> <span>Рекомендуем</span></a>
-                <a href="following.html"><i class="fas fa-user-friends"></i> <span>Подписки</span></a>
-                <a href="messages.html"><i class="fas fa-message"></i> <span>Сообщения</span></a>
-                <a href="notifications.html"><i class="fas fa-message"></i> <span>Уведомления</span></a>
+                <a href="index.php"><i class="fas fa-home"></i> <span>Рекомендуем</span></a>
+                <a href="following.php"><i class="fas fa-user-friends"></i> <span>Подписки</span></a>
+                <a href="messages.php"><i class="fas fa-message"></i> <span>Сообщения</span></a>
+                <a href="notifications.php"><i class="fas fa-message"></i> <span>Уведомления</span></a>
               </div>
             <div class="login">
                 <p>Войдите, чтобы подписываться на авторов, ставить лайки видео и читать комментарии</p>

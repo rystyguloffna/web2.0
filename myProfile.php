@@ -1,6 +1,6 @@
 <?php 
-session_start();
-
+// session_start();
+include "storevideo/config.php";
 if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 
  ?>
@@ -19,8 +19,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
   <body>
     <header>
       <nav class="navbar">
-        <a href="index.html"><img class="logo" src="assets/logo.png" alt="Tiktok" /></a>
-        <a href="search.html">
+        <a href="index.php"><img class="logo" src="assets/logo.png" alt="Tiktok" /></a>
+        <a href="search.php">
           <div class="search-bar">
             <input
               type="text"
@@ -33,10 +33,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         </a>
 
         <div class="nav-right">
-          <a href="upload.html">
+          <a href="upload.php">
             <button class="upload-btn"><span>&#43;</span>Загрузить</button>
           </a>
-          <a href="login.html">
+          <a href="login.php">
             <button class="login-btn">Войти</button>
           </a>
           <div class="drop-down">
@@ -65,10 +65,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
           <div class="fix">
 
             <div class="btns">
-                <a href="index.html"><i class="fas fa-home"></i> <span>Рекомендуем</span></a>
-                <a href="following.html"><i class="fas fa-user-friends"></i> <span>Подписки</span></a>
-                <a href="messages.html"><i class="fas fa-message"></i> <span>Сообщения</span></a>
-                <a href="notifications.html"><i class="fas fa-message"></i> <span>Уведомления</span></a>
+                <a href="index.php"><i class="fas fa-home"></i> <span>Рекомендуем</span></a>
+                <a href="following.php"><i class="fas fa-user-friends"></i> <span>Подписки</span></a>
+                <a href="messages.php"><i class="fas fa-message"></i> <span>Сообщения</span></a>
+                <a href="notifications.php"><i class="fas fa-message"></i> <span>Уведомления</span></a>
               </div>
             <div class="login">
                 <p>Войдите, чтобы подписываться на авторов, ставить лайки видео и читать комментарии</p>
@@ -78,7 +78,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                 <p>Рекомендуемые аккаунты</p>
                 <div class="user">
                     <img src="assets/Homyak.jpeg" alt="avatar">
-                    <h6 class="username"><a href="accounts/homyak.html">homm9k</a></h6>
+                    <h6 class="username"><a href="accounts/homyak.php">homm9k</a></h6>
                 </div>
                 <div class="user">
                     <img src="assets/oksukpaeva_k.jpeg" alt="avatar">
@@ -143,6 +143,20 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                  </div>
             </div>
             <div class="acc-content">
+            <?php
+            $username = $_SESSION['username'];
+            $fetchVideos = mysqli_query($con, "SELECT * FROM videos WHERE username = '".$username."' ORDER BY id DESC ");
+            while($row = mysqli_fetch_assoc($fetchVideos)){
+                $name = $row['name'];
+                $location = $row['location'];
+
+                echo "<div style='float: left; margin-right: 5px;'>
+                    <video src='storevideo/".$location."' controls width= '320px' height='320px' ></video> <br>
+                    <span>".$name."</span> <br>
+                    <a href='storevideo/".$location."' download='".$name."'>Download</a>
+                </div>";
+            }
+            ?>
             </div>
           </div>
         </div>

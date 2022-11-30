@@ -1,5 +1,6 @@
 <?php
-include "config.php";
+
+include "storevideo/config.php";
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@ include "config.php";
             $location = $row['location'];
 
             echo "<div style='float: left; margin-right: 5px;'>
-                <video src='".$location."' controls width= '320px' height='320px' ></video> <br>
+                <video src='storevideo/".$location."' controls width= '320px' height='320px' ></video> <br>
                 <span>".$name."</span> <br>
                 <a href='".$location."' download='".$name."'>Download</a>
             </div>";

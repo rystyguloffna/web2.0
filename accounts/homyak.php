@@ -13,7 +13,7 @@
   <body>
     <header>
       <nav class="navbar">
-        <a href="../index.html"><img class="logo" src="../assets/logo.png" alt="Tiktok" /></a>
+        <a href="../index.php"><img class="logo" src="../assets/logo.png" alt="Tiktok" /></a>
         <div class="search-bar">
           <input
             type="text"
@@ -26,7 +26,7 @@
 
         <div class="nav-right">
           <button class="upload-btn"><span>&#43;</span>Загрузить</button>
-          <a href="../login.html">
+          <a href="../login.php">
             <button class="login-btn">Войти</button>
           </a>
           <div class="drop-down">
@@ -53,8 +53,8 @@
     <main>
         <div class="left">
             <div class="btns">
-                <a href="../index.html"><i class="fas fa-home"></i> <span>Рекомендуем</span></a>
-                <a href="../following.html"><i class="fas fa-user-friends"></i> <span>Подписки</span></a>
+                <a href="../index.php"><i class="fas fa-home"></i> <span>Рекомендуем</span></a>
+                <a href="../following.php"><i class="fas fa-user-friends"></i> <span>Подписки</span></a>
                 <a href="#"><i class="fas fa-video"></i> <span>Трансляция</span></a>
               </div>
             <div class="login">
@@ -65,7 +65,7 @@
                 <p>Рекомендуемые аккаунты</p>
                 <div class="user">
                     <img src="../assets/Homyak.jpeg" alt="avatar">
-                    <h6 class="username"><a href="accounts/homyak.html">homm9k</a></h6>
+                    <h6 class="username"><a href="accounts/homyak.php">homm9k</a></h6>
                 </div>
                 <div class="user">
                     <img src="../assets/oksukpaeva_k.jpeg" alt="avatar">
@@ -108,7 +108,7 @@
                     <div class="user">
                         <img src="../assets/Homyak.jpeg" alt="avatar">
                         <div>
-                            <h6><a href="accounts/homyak.html">homm9k</a></h6>
+                            <h6><a href="accounts/homyak.php">homm9k</a></h6>
                             <p>ХОМЯК</p>
                             <button>Подписаться</button>
                         </div>

@@ -19,6 +19,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
 	$user_data = 'uname='. $uname;
 
+	$_SESSION['username'] = $uname;
 
 	if (empty($uname)) {
 		header("Location: signup.php?error=User Name is required&$user_data");
@@ -46,7 +47,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 			header("Location: signup.php?error=The username is taken try another&$user_data");
 	        exit();
 		}else {
-           $sql2 = "INSERT INTO users(id ,username, password) VALUES('$id','$uname', '$pass')";
+           $sql2 = "INSERT INTO users(username, password) VALUES($uname', '$pass')";
            $result2 = mysqli_query($conn, $sql2);
            if ($result2) {
            	 header("Location: index.php?success=Your account has been created successfully");
